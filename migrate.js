@@ -1,0 +1,1 @@
+require("./migrations/create_table");
