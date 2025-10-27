@@ -1,3 +1,4 @@
+const fs = require("fs");
 const express = require("express");
 const cors = require("cors");
 const Database = require("better-sqlite3");
@@ -5,6 +6,13 @@ const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// 🔧 Upewnij się, że folder 'db' istnieje
+if (!fs.existsSync("./db")) {
+  fs.mkdirSync("./db", { recursive: true });
+  console.log("📁 Folder 'db' został utworzony");
+}
+
 const db = new Database("./db/data.db");
 
 app.use(cors());
