@@ -1,0 +1,15 @@
+{
+  "name": "droidy-liza-2025",
+  "version": "1.0.0",
+  "description": "CRUD droidy (Node.js + Express + SQLite)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "migrate": "node migrate.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
